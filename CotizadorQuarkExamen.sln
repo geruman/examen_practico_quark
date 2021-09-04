@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CotizadorQuarkExamen", "CotizadorQuarkExamen\CotizadorQuarkExamen.csproj", "{B3CC37DA-4419-4E72-8725-71CAA20FB122}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3CC37DA-4419-4E72-8725-71CAA20FB122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3CC37DA-4419-4E72-8725-71CAA20FB122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3CC37DA-4419-4E72-8725-71CAA20FB122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3CC37DA-4419-4E72-8725-71CAA20FB122}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE7A6BAC-972C-48EC-87C1-F4FA9BA4338F}
+	EndGlobalSection
+EndGlobal
