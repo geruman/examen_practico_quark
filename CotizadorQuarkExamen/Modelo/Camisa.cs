@@ -55,7 +55,7 @@ namespace CotizadorQuarkExamen.Modelo
             }
             if (CalidadPremium)
             {
-                descripcion += " Premium";
+                descripcion += " Premium)";
             }
             else
             {

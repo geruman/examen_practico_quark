@@ -8,3 +8,13 @@ D:\csharp\CotizadorQuarkExamen\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExam
 D:\csharp\CotizadorQuarkExamen\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.csproj.CoreCompileInputs.cache
 D:\csharp\CotizadorQuarkExamen\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.exe
 D:\csharp\CotizadorQuarkExamen\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.pdb
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\bin\Debug\CotizadorQuarkExamen.exe.config
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\bin\Debug\CotizadorQuarkExamen.exe
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\bin\Debug\CotizadorQuarkExamen.pdb
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.csproj.AssemblyReference.cache
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.Form1.resources
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.Properties.Resources.resources
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.csproj.GenerateResource.cache
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.csproj.CoreCompileInputs.cache
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.exe
+D:\csharp\examen_practico_quark\CotizadorQuarkExamen\obj\Debug\CotizadorQuarkExamen.pdb
