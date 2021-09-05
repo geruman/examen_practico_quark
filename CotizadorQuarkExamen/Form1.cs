@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CotizadorQuarkExamen.Vista;
 using CotizadorQuarkExamen.Controlador;
+using CotizadorQuarkExamen.Vista.Interfaces;
 namespace CotizadorQuarkExamen
 {
     public partial class Form1 : Form, IMainView
@@ -34,7 +35,7 @@ namespace CotizadorQuarkExamen
 
         public void UpdateVendedor(string nombre, string apellido, int codigoVendedor)
         {
-            lblVendedor.Text = nombre +" "+apellido+ " | " + codigoVendedor;
+            lblVendedor.Text = "Nombre y apellido: "+nombre +" "+apellido+ " | Codigo vendedor: " + codigoVendedor;
         }
 
         private void Form1_Load(object sender, EventArgs e)

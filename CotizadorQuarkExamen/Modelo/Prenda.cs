@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CotizadorQuarkExamen
+namespace CotizadorQuarkExamen.Modelo
 {
     public abstract class Prenda
     {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CotizadorQuarkExamen.Vista;
 using CotizadorQuarkExamen.Modelo;
 using CotizadorQuarkExamen.Modelo.Exceptions;
+using CotizadorQuarkExamen.Vista.Interfaces;
 namespace CotizadorQuarkExamen.Controlador
 {
     public class ViewController
@@ -238,7 +239,9 @@ namespace CotizadorQuarkExamen.Controlador
         {
             if (EsCantidadDePrendasValido(MainView.GetCantidad())&&EsPrecioUnitarioValido(MainView.GetPrecioUnitario())&&prendaEncontrada!=null)
             {
-                prendaEncontrada.PrecioUnitario = decimal.Parse(MainView.GetPrecioUnitario());
+                //Se tiene que reemplazar el . por , en valores unitarios porque si no el sistema de parseo lo toma como entero, haciendo que 88.5 sea 885
+                //por lo menos con mi configuracion regional
+                prendaEncontrada.PrecioUnitario = decimal.Parse(MainView.GetPrecioUnitario().Replace(".",","));
                 try
                 {
                     Cotizacion cot = new Cotizacion(vendedor.IdVendedor, prendaEncontrada, int.Parse(MainView.GetCantidad()));

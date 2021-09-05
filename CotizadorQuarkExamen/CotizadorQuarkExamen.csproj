@@ -62,7 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Modelo\Tienda.cs" />
     <Compile Include="Modelo\Vendedor.cs" />
-    <Compile Include="Vista\IMainView.cs" />
+    <Compile Include="Vista\Interfaces\IMainView.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

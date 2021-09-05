@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CotizadorQuarkExamen.Modelo.Exceptions;
-namespace CotizadorQuarkExamen
+namespace CotizadorQuarkExamen.Modelo
 {
     public class Cotizacion
     {
@@ -19,7 +19,7 @@ namespace CotizadorQuarkExamen
         {
             idCotizacion++;
             this.IdCotizacion = idCotizacion;
-            FechaCotizacion = new DateTime();
+            FechaCotizacion = DateTime.Now;
             IdVendedor = idVendedor;
             PrendaCotizada = prendaCotizada;
             if (cantidadDeUnidades > PrendaCotizada.UnidadesEnStock)
