@@ -58,7 +58,8 @@ namespace CotizadorQuarkExamen
             checkCuelloMao.Checked = false;
             checkChupin.Checked = false;
             checkChupin.Enabled = false;
-            
+            LimpiarDatosCotizacion();
+
         }
 
         public void CotizandoPantalones()
@@ -69,6 +70,11 @@ namespace CotizadorQuarkExamen
             checkCuelloMao.Checked = false;
             checkChupin.Checked = false;
             checkChupin.Enabled = true;
+            LimpiarDatosCotizacion();
+        }
+        private void LimpiarDatosCotizacion()
+        {
+            lblPrecioCotizacion.Text = "$";
         }
 
         private void radioCamisa_CheckedChanged(object sender, EventArgs e)
@@ -76,10 +82,12 @@ namespace CotizadorQuarkExamen
             if (radioCamisa.Checked)
             {
                 CotizandoCamisas();
+                viewController.EncontrarStock();
             }
             else
             {
                 CotizandoPantalones();
+                viewController.EncontrarStock();
             }
         }
 
@@ -110,17 +118,67 @@ namespace CotizadorQuarkExamen
 
         private void checkMangaCorta_CheckedChanged(object sender, EventArgs e)
         {
+            LimpiarDatosCotizacion();
             viewController.EncontrarStock();
         }
 
         private void checkCuelloMao_CheckedChanged(object sender, EventArgs e)
         {
+            LimpiarDatosCotizacion();
             viewController.EncontrarStock();
         }
 
         private void radioPremium_CheckedChanged(object sender, EventArgs e)
         {
+            LimpiarDatosCotizacion();
             viewController.EncontrarStock();
+        }
+
+        private void checkChupin_CheckedChanged(object sender, EventArgs e)
+        {
+            LimpiarDatosCotizacion();
+            viewController.EncontrarStock();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            viewController.EsPrecioUnitarioValido(txtPrecioUnitario.Text);
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            viewController.EsCantidadDePrendasValido(txtCantidad.Text);
+        }
+        public void MostrarMensaje(string mensaje)
+        {
+            MessageBox.Show(mensaje);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            viewController.Cotizar();
+        }
+        public void SetPrecioCotizacion(string precioCotizacion)
+        {
+            lblPrecioCotizacion.Text = precioCotizacion;
+        }
+        string IMainView.GetPrecioUnitario()
+        {
+            return txtPrecioUnitario.Text;
+        }
+
+        string IMainView.GetCantidad()
+        {
+            return txtCantidad.Text;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            viewController.HistoricoCotizaciones();
+        }
+        public void SetHistorial(string text)
+        {
+            lblHistorial.Text = text;
         }
     }
 }

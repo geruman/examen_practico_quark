@@ -13,5 +13,6 @@ namespace CotizadorQuarkExamen
         public decimal PrecioUnitario { get; set; }
         public int UnidadesEnStock { get; set; }
         public abstract decimal PrecioFinal();
+        
     }
 }

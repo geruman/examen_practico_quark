@@ -32,11 +32,11 @@ namespace CotizadorQuarkExamen
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblPrecioCotizacion = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -59,7 +59,6 @@ namespace CotizadorQuarkExamen
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHistorial = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -77,7 +76,6 @@ namespace CotizadorQuarkExamen
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -99,7 +97,7 @@ namespace CotizadorQuarkExamen
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.lblPrecioCotizacion);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.groupBox7);
             this.groupBox3.Controls.Add(this.groupBox6);
@@ -112,14 +110,14 @@ namespace CotizadorQuarkExamen
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cotización";
             // 
-            // label10
+            // lblPrecioCotizacion
             // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(287, 299);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(403, 38);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "$";
+            this.lblPrecioCotizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioCotizacion.Location = new System.Drawing.Point(287, 299);
+            this.lblPrecioCotizacion.Name = "lblPrecioCotizacion";
+            this.lblPrecioCotizacion.Size = new System.Drawing.Size(403, 38);
+            this.lblPrecioCotizacion.TabIndex = 7;
+            this.lblPrecioCotizacion.Text = "$";
             // 
             // button1
             // 
@@ -129,11 +127,12 @@ namespace CotizadorQuarkExamen
             this.button1.TabIndex = 6;
             this.button1.Text = "Cotizar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.textBox2);
-            this.groupBox7.Controls.Add(this.textBox1);
+            this.groupBox7.Controls.Add(this.txtPrecioUnitario);
+            this.groupBox7.Controls.Add(this.txtCantidad);
             this.groupBox7.Controls.Add(this.label9);
             this.groupBox7.Controls.Add(this.label7);
             this.groupBox7.Location = new System.Drawing.Point(278, 203);
@@ -143,19 +142,21 @@ namespace CotizadorQuarkExamen
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Precio unitario y cantidad";
             // 
-            // textBox2
+            // txtPrecioUnitario
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(109, 34);
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(100, 22);
+            this.txtPrecioUnitario.TabIndex = 4;
+            this.txtPrecioUnitario.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // txtCantidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(286, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtCantidad.Location = new System.Drawing.Point(286, 35);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 22);
+            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // label9
             // 
@@ -282,6 +283,7 @@ namespace CotizadorQuarkExamen
             this.checkChupin.TabIndex = 2;
             this.checkChupin.Text = "Chupin";
             this.checkChupin.UseVisualStyleBackColor = true;
+            this.checkChupin.CheckedChanged += new System.EventHandler(this.checkChupin_CheckedChanged);
             // 
             // radioPantalon
             // 
@@ -371,6 +373,7 @@ namespace CotizadorQuarkExamen
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(706, 587);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblHistorial
             // 
@@ -379,15 +382,6 @@ namespace CotizadorQuarkExamen
             this.lblHistorial.Name = "lblHistorial";
             this.lblHistorial.Size = new System.Drawing.Size(0, 17);
             this.lblHistorial.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(719, 600);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Actualizar Precio unitario prendas";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -425,10 +419,10 @@ namespace CotizadorQuarkExamen
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblPrecioCotizacion;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -451,8 +445,7 @@ namespace CotizadorQuarkExamen
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblHistorial;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPrecioUnitario;
     }
 }
 

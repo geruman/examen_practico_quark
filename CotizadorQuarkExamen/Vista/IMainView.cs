@@ -19,5 +19,10 @@ namespace CotizadorQuarkExamen.Vista
         bool Chupin();
         bool Premium();
         void SetUnidadesEnStock(int unidades);
+        void MostrarMensaje(string mensaje);
+        string GetPrecioUnitario();
+        string GetCantidad();
+        void SetPrecioCotizacion(string precioCotizacion);
+        void SetHistorial(string texto);
     }
 }

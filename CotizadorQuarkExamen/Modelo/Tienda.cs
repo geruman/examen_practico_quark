@@ -21,6 +21,7 @@ namespace CotizadorQuarkExamen
         {
             return prendas;
         }
+        
         public void AgregarPrenda(Prenda prenda)
         {
             prendas.Add(prenda);

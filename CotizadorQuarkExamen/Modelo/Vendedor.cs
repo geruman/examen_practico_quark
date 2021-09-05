@@ -19,6 +19,14 @@ namespace CotizadorQuarkExamen
             Apellido = apellido;
             cotizaciones = new List<Cotizacion>();
         }
+        public void AddCotizacion(Cotizacion cotizacion)
+        {
+            cotizaciones.Add(cotizacion);
+        }
+        public List<Cotizacion> GetCotizaciones()
+        {
+            return cotizaciones;
+        }
 
     }
 }

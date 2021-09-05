@@ -34,5 +34,34 @@ namespace CotizadorQuarkExamen.Modelo
             }
             return PrecioUnitario + modificadorPrecio;
         }
+        public override string ToString()
+        {
+            string descripcion = "(Camisa";
+            if (MangaCorta)
+            {
+                descripcion += " Manga Corta";
+            }
+            else
+            {
+                descripcion += " Manga Larga";
+            }
+            if (CuelloMao)
+            {
+                descripcion += " Cuello Mao";
+            }
+            else
+            {
+                descripcion += " Cuello normal";
+            }
+            if (CalidadPremium)
+            {
+                descripcion += " Premium";
+            }
+            else
+            {
+                descripcion += " Standard)";
+            }
+            return descripcion;
+        }
     }
 }

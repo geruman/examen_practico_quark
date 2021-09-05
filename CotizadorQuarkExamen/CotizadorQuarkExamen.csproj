@@ -54,6 +54,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Exceptions\UnidadesEnStockMenoresException.cs" />
     <Compile Include="Modelo\Pantalon.cs" />
     <Compile Include="Modelo\Prenda.cs" />
     <Compile Include="Controlador\ViewController.cs" />

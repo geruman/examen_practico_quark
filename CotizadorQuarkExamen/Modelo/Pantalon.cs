@@ -28,5 +28,26 @@ namespace CotizadorQuarkExamen.Modelo
             }
             return PrecioUnitario + modificadorPrecio;
         }
+        public override string ToString()
+        {
+            string descripcion = "(Pantalon";
+            if (Chupin)
+            {
+                descripcion += " Chupin";
+            }
+            else
+            {
+                descripcion += " Normal";
+            }
+            if (CalidadPremium)
+            {
+                descripcion += " Premium";
+            }
+            else
+            {
+                descripcion += " Standard)";
+            }
+            return descripcion;
+        }
     }
 }
