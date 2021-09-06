@@ -27,3 +27,16 @@ Al darle click al boton Cotizar, se cotizara la prenda con los parametros actual
 mediante el tabbed pane "Historial de cotizaciones".
 Actualmente no hay forma de generar una venta por lo que las unidades en stock nunca disminuyen, pero puede probarse que la cotización funcione correctamente
 poniendo una cantidad mayor a las unidades en stock disponibles.
+
+Hay un pequeño fix en ViewController.Cotizar (ViewController linea 244) Que reemplaza el "." por una "," del valor recibido por el textbox Precio Unitario, esto 
+se debe a un problema con la Localización de la moneda en mi computadora (Latinoamerica, Argentina) Que hace que no reconozca el . como número decimal.
+
+El viewController tiene algo de logica de negocio cuando se busca la Prenda, ViewController.EncontrarStock (Linea 18). Después de pensar un poco el mejor lugar
+para realizar dicha busqueda me decante por ponerla en el viewController ya que me parecio que quedaría mas simple que ponerla en el Objeto TIenda y tener que 
+separar los tipos de prenda dentro del modelo, ya que no encontre una buena manera de generalizar la búsqueda e iba a terminar duplicando lógica en el ViewController
+de cualquier manera.
+
+
+
+Saludos y espero que tengan un buen momento revisando esta entrega.
+Germán Bernhardt.
