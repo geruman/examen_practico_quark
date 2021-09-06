@@ -8,7 +8,7 @@ namespace CotizadorQuarkExamen.Modelo
 {
     public class Cotizacion
     {
-        private static int idCotizacion = 0;
+        protected static int idCotizacion = 0;
         public int IdCotizacion { get; private set; }
         public  DateTime FechaCotizacion { get; private set; }
         public int IdVendedor { get; private set; }

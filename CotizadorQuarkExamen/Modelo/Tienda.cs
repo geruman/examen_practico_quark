@@ -11,11 +11,21 @@ namespace CotizadorQuarkExamen.Modelo
         public string Nombre { get; private set; }
         public string Direccion { get; private set; }
         private List<Prenda> prendas;
+        private List<Vendedor> vendedores;
         public Tienda(string nombre, string direccion)
         {
             Nombre = nombre;
             Direccion = direccion;
             prendas = new List<Prenda>();
+            vendedores = new List<Vendedor>();
+        }
+        public List<Vendedor> GetVendedores()
+        {
+            return vendedores;
+        }
+        public void AgregarVendedor(Vendedor vendedor)
+        {
+            vendedores.Add(vendedor);
         }
         public List<Prenda> GetPrendas()
         {

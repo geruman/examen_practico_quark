@@ -21,7 +21,7 @@ namespace CotizadorQuarkExamen
             
             Tienda tienda = new Tienda("La Megatienda de Prendas", "Calle SiempreViva 3322");
             Vendedor vendedor = new Vendedor(1, "Jorge \"Demo\"", "Padillas");
-            
+            tienda.AgregarVendedor(vendedor);
             //Camisas
             //100 de manga corta, cuello mao y calidad estandar
             tienda.AgregarPrenda(new Camisa(true, true, true, 100));
