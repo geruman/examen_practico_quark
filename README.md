@@ -1,4 +1,4 @@
-#Examen practico Quark, Cotizador
+# Examen practico Quark, Cotizador
 
 
 - El proyecto se realizo como una aplicación de Windows Forms .net.
@@ -10,7 +10,7 @@
 El diagrama de clases esta modelado separando los atributos de las propiedades, me parecio más legible aunque luego en el código la mayoría se codificaron directamente 
 como Propiedades(con get;set; o get; private set;)
 
-##Sobre la codificación del proyecto.
+## Sobre la codificación del proyecto.
 
 
 Se útilizo un windows form compuesto de distintos componentes llamado Form1,
@@ -20,7 +20,7 @@ solo la interfaz implementada IMainView, no el funcionamiento interno)
 Luego Form1, reacciona contra los eventos de usuarios y llama directamente a metodos del viewController, el viewController habla contra el modelo (Del cual también tiene 
 una referencia a travez del objeto tienda creado anteriormente) Y luego llama a métodos implementados de la interfaz IMainView.
 
-##Sobre el uso de la aplicación.
+## Sobre el uso de la aplicación.
 Cuando se ejecuta el programa, tanto la tienda como el vendedor están autogenerados y solo puede usarse un vendedor, las prendas también estan creadas de antemano.
 Pueden seleccionarse los parametros para la cotización y llenar los valores de precio unitario y cantidad.
 Al darle click al boton Cotizar, se cotizara la prenda con los parametros actuales y el mismo se agregara al historial de cotizaciones (Al cual puede accederse
