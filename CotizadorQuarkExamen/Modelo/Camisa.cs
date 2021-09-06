@@ -12,6 +12,8 @@ namespace CotizadorQuarkExamen.Modelo
         public bool CuelloMao { get; set; }
         public Camisa(bool mangaCorta, bool cuelloMao,bool calidadPremium, int unidadesEnStock)
         {
+            idPrendaGlobal = idPrendaGlobal + 1;
+            IdPrenda = idPrendaGlobal;
             MangaCorta = mangaCorta;
             CuelloMao = cuelloMao;
             UnidadesEnStock = unidadesEnStock;

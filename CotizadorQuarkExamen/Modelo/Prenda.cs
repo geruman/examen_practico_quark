@@ -13,6 +13,7 @@ namespace CotizadorQuarkExamen.Modelo
         public decimal PrecioUnitario { get; set; }
         public int UnidadesEnStock { get; set; }
         public abstract decimal PrecioFinal();
+        protected static int idPrendaGlobal=0;
         
     }
 }
