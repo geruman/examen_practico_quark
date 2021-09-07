@@ -36,6 +36,7 @@ namespace CotizadorQuarkExamen.Controlador
                                         if (c.CalidadPremium)
                                         {
                                             prendaEncontrada = c;
+                                            break;
                                         }
                                     }
                                     else
@@ -43,6 +44,7 @@ namespace CotizadorQuarkExamen.Controlador
                                         if (!c.CalidadPremium)
                                         {
                                             prendaEncontrada = c;
+                                            break;
                                         }
                                     }
                                 }
@@ -63,6 +65,7 @@ namespace CotizadorQuarkExamen.Controlador
                                         if (c.CalidadPremium)
                                         {
                                             prendaEncontrada = c;
+                                            break;
                                         }
                                     }
                                     else
@@ -70,6 +73,7 @@ namespace CotizadorQuarkExamen.Controlador
                                         if (!c.CalidadPremium)
                                         {
                                             prendaEncontrada = c;
+                                            break;
                                         }
                                     }
                                 }
