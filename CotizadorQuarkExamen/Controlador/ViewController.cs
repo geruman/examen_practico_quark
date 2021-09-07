@@ -212,8 +212,17 @@ namespace CotizadorQuarkExamen.Controlador
         {
             try
             {
-                decimal.Parse(precio);
-                return true;
+                decimal p = decimal.Parse(precio);
+                if (p > 0)
+                {
+                    return true;
+
+                }
+                else
+                {
+                    MainView.MostrarMensaje("El precio unitario debe ser mayor que cero");
+                    return false;
+                }
             }
             catch (FormatException)
             {
@@ -225,8 +234,16 @@ namespace CotizadorQuarkExamen.Controlador
         {
             try
             {
-                int.Parse(cantidadDePrendas);
-                return true;
+                int i = int.Parse(cantidadDePrendas);
+                if (i > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    MainView.MostrarMensaje("La cantidad debe ser mayor que cero.");
+                    return false;
+                }
             }
             catch (FormatException)
             {
@@ -237,17 +254,18 @@ namespace CotizadorQuarkExamen.Controlador
         }
         public void Cotizar()
         {
-            if (EsCantidadDePrendasValido(MainView.GetCantidad())&&EsPrecioUnitarioValido(MainView.GetPrecioUnitario())&&prendaEncontrada!=null)
+            if (EsCantidadDePrendasValido(MainView.GetCantidad()) && EsPrecioUnitarioValido(MainView.GetPrecioUnitario()) && prendaEncontrada != null)
             {
                 //Se tiene que reemplazar el . por , en valores unitarios porque si no el sistema de parseo lo toma como entero, haciendo que 88.5 sea 885
                 //por lo menos con mi configuracion regional
-                prendaEncontrada.PrecioUnitario = decimal.Parse(MainView.GetPrecioUnitario().Replace(".",","));
+                prendaEncontrada.PrecioUnitario = decimal.Parse(MainView.GetPrecioUnitario().Replace(".", ","));
                 try
                 {
                     Cotizacion cot = new Cotizacion(vendedor.IdVendedor, prendaEncontrada, int.Parse(MainView.GetCantidad()));
                     vendedor.AddCotizacion(cot);
                     MainView.SetPrecioCotizacion("$ " + cot.PrecioFinalCotizado);
-                }catch(UnidadesEnStockMenoresException ex)
+                }
+                catch (UnidadesEnStockMenoresException ex)
                 {
                     MainView.MostrarMensaje(ex.Message);
                 }
@@ -256,7 +274,7 @@ namespace CotizadorQuarkExamen.Controlador
         public void HistoricoCotizaciones()
         {
             string texto = "";
-            foreach(Cotizacion c in vendedor.GetCotizaciones())
+            foreach (Cotizacion c in vendedor.GetCotizaciones())
             {
                 texto += $"Cotizacion {c.IdCotizacion} | Fecha {c.FechaCotizacion} | Vendedor {c.IdVendedor} |\n\t {c.PrendaCotizada.ToString()} | Unidades: {c.CantidadDeUnidades}| Total: ${c.PrecioFinalCotizado}\n\n";
             }
